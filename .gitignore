@@ -13,6 +13,8 @@ hs_err_pid*
 android/libs/armeabi/
 android/libs/armeabi-v7a/
 android/libs/x86/
+android/libs/arm64-v8a/
+android/libs/x86_64/
 android/gen/
 local.properties
 com_crashlytics_export_strings.xml
