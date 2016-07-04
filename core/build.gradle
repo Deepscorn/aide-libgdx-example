@@ -1,5 +1,12 @@
+apply plugin: 'me.tatarka.retrolambda'
+
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 eclipse.project.name = appName + '-core'
+
+compileJava {
+  sourceCompatibility "$JavaVersion.VERSION_1_8"
+  targetCompatibility "$JavaVersion.VERSION_1_8"
+}
 
 dependencies {
   compile "com.badlogicgames.gdx:gdx:$gdxVersion"
@@ -7,5 +14,7 @@ dependencies {
   compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
   compile "com.kotcrab.vis:vis-runtime:$visRuntimeVersion"
   compile "net.onedaybeard.artemis:artemis-odb:$artemisOdbVersion"
+
+  compile "io.reactivex:rxjava:1.1.4"
 }
         

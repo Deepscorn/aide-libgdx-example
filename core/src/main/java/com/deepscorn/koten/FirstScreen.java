@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import rx.Observable;
+
 /** First screen of the application. Displayed after the application is created. */
 public class FirstScreen implements Screen {
 
@@ -17,6 +19,9 @@ public class FirstScreen implements Screen {
         // Prepare your screen here.
         backgroundTexture = new Texture(Gdx.files.internal("libgdx128.png"));
         batch = new SpriteBatch();
+
+        Observable.just("Hello, Rx and Java 8!")
+                .subscribe(item -> Gdx.app.log("", item));
     }
 
     @Override
